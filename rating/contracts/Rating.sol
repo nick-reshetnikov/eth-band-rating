@@ -5,9 +5,13 @@ contract Rating{
 
   bytes32[] public bandList;
 
-  function Rating(bytes32[] bandNames) public {
+  constructor(bytes32[] memory bandNames) public {
     bandList = bandNames;
   }
+
+  /* function Rating(bytes32[] memory bandNames) public {
+    bandList = bandNames;
+  } */
 
   function totalVotesFor(bytes32 band) view public returns (uint8) {
     return ratingsReceived[band];
