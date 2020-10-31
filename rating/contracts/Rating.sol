@@ -1,11 +1,12 @@
-pragma solidity >=0.4.22 <0.8.0;
+/* pragma solidity >=0.4.22 <0.8.0; */
+pragma experimental ABIEncoderV2;
 
-contract Rating{
+contract Rating {
   mapping (bytes32 => uint8) public ratingsReceived;
 
-  bytes32[] public bandList;
+  string[] public bandList;
 
-  constructor(bytes32[] memory bandNames) public {
+  constructor(string[] memory bandNames) public {
     bandList = bandNames;
   }
 
