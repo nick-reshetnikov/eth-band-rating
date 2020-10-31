@@ -1,0 +1,1137 @@
+{
+  "contractName": "Rating",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "string[]",
+          "name": "bandNames",
+          "type": "string[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "bandList",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "name": "ratingsReceived",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "band",
+          "type": "bytes32"
+        }
+      ],
+      "name": "totalVotesFor",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "band",
+          "type": "bytes32"
+        }
+      ],
+      "name": "voteForBand",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"string[]\",\"name\":\"bandNames\",\"type\":\"string[]\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"bandList\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"name\":\"ratingsReceived\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"band\",\"type\":\"bytes32\"}],\"name\":\"totalVotesFor\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"band\",\"type\":\"bytes32\"}],\"name\":\"voteForBand\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/reshetn/Documents/GitHub/eth-band-rating/rating/contracts/Rating.sol\":\"Rating\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/reshetn/Documents/GitHub/eth-band-rating/rating/contracts/Rating.sol\":{\"keccak256\":\"0xc51214b1059da27f94e4ae5fca94e8667dc5bcd87023427564c611b0fc44be2e\",\"urls\":[\"bzz-raw://7152912f21418d28735545001f4ee4a53bf02df2da1812404dea74dcfe97a279\",\"dweb:/ipfs/QmW6j2tfomtynxV435PF5WRNbvXdBoJC8iFnrpzhXeWDJF\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516107c73803806107c783398181016040526100329190810190610290565b806001908051906020019061004892919061004f565b5050610385565b82805482825590600052602060002090810192821561009e579160200282015b8281111561009d57825182908051906020019061008d9291906100af565b509160200191906001019061006f565b5b5090506100ab919061012f565b5090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106100f057805160ff191683800117855561011e565b8280016001018555821561011e579182015b8281111561011d578251825591602001919060010190610102565b5b50905061012b919061015b565b5090565b61015891905b80821115610154576000818161014b9190610180565b50600101610135565b5090565b90565b61017d91905b80821115610179576000816000905550600101610161565b5090565b90565b50805460018160011615610100020316600290046000825580601f106101a657506101c5565b601f0160209004906000526020600020908101906101c4919061015b565b5b50565b600082601f8301126101d957600080fd5b81516101ec6101e7826102fe565b6102d1565b9150818183526020840193506020810190508360005b838110156102325781518601610218888261023c565b845260208401935060208301925050600181019050610202565b5050505092915050565b600082601f83011261024d57600080fd5b815161026061025b82610326565b6102d1565b9150808252602083016020830185838301111561027c57600080fd5b610287838284610352565b50505092915050565b6000602082840312156102a257600080fd5b600082015167ffffffffffffffff8111156102bc57600080fd5b6102c8848285016101c8565b91505092915050565b6000604051905081810181811067ffffffffffffffff821117156102f457600080fd5b8060405250919050565b600067ffffffffffffffff82111561031557600080fd5b602082029050602081019050919050565b600067ffffffffffffffff82111561033d57600080fd5b601f19601f8301169050602081019050919050565b60005b83811015610370578082015181840152602081019050610355565b8381111561037f576000848401525b50505050565b610433806103946000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c80632f265cf7146100515780635f4187b014610081578063d2375694146100b1578063ef35bf4a146100cd575b600080fd5b61006b6004803603610066919081019061026a565b6100fd565b6040516100789190610326565b60405180910390f35b61009b6004803603610096919081019061026a565b610126565b6040516100a89190610326565b60405180910390f35b6100cb60048036036100c6919081019061026a565b610146565b005b6100e760048036036100e29190810190610293565b610187565b6040516100f49190610304565b60405180910390f35b600080600083815260200190815260200160002060009054906101000a900460ff169050919050565b60006020528060005260406000206000915054906101000a900460ff1681565b600160008083815260200190815260200160002060008282829054906101000a900460ff160192506101000a81548160ff021916908360ff16021790555050565b6001818154811061019457fe5b906000526020600020016000915090508054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102385780601f1061020d57610100808354040283529160200191610238565b820191906000526020600020905b81548152906001019060200180831161021b57829003601f168201915b505050505081565b60008135905061024f816103c2565b92915050565b600081359050610264816103d9565b92915050565b60006020828403121561027c57600080fd5b600061028a84828501610240565b91505092915050565b6000602082840312156102a557600080fd5b60006102b384828501610255565b91505092915050565b60006102c782610341565b6102d1818561034c565b93506102e181856020860161037e565b6102ea816103b1565b840191505092915050565b6102fe81610371565b82525050565b6000602082019050818103600083015261031e81846102bc565b905092915050565b600060208201905061033b60008301846102f5565b92915050565b600081519050919050565b600082825260208201905092915050565b6000819050919050565b6000819050919050565b600060ff82169050919050565b60005b8381101561039c578082015181840152602081019050610381565b838111156103ab576000848401525b50505050565b6000601f19601f8301169050919050565b6103cb8161035d565b81146103d657600080fd5b50565b6103e281610367565b81146103ed57600080fd5b5056fea365627a7a723158203a3717421845476450f92d6230673e22859aec236a0ce0e789b2c7d30b2f9f8f6c6578706572696d656e74616cf564736f6c63430005100040",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c80632f265cf7146100515780635f4187b014610081578063d2375694146100b1578063ef35bf4a146100cd575b600080fd5b61006b6004803603610066919081019061026a565b6100fd565b6040516100789190610326565b60405180910390f35b61009b6004803603610096919081019061026a565b610126565b6040516100a89190610326565b60405180910390f35b6100cb60048036036100c6919081019061026a565b610146565b005b6100e760048036036100e29190810190610293565b610187565b6040516100f49190610304565b60405180910390f35b600080600083815260200190815260200160002060009054906101000a900460ff169050919050565b60006020528060005260406000206000915054906101000a900460ff1681565b600160008083815260200190815260200160002060008282829054906101000a900460ff160192506101000a81548160ff021916908360ff16021790555050565b6001818154811061019457fe5b906000526020600020016000915090508054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102385780601f1061020d57610100808354040283529160200191610238565b820191906000526020600020905b81548152906001019060200180831161021b57829003601f168201915b505050505081565b60008135905061024f816103c2565b92915050565b600081359050610264816103d9565b92915050565b60006020828403121561027c57600080fd5b600061028a84828501610240565b91505092915050565b6000602082840312156102a557600080fd5b60006102b384828501610255565b91505092915050565b60006102c782610341565b6102d1818561034c565b93506102e181856020860161037e565b6102ea816103b1565b840191505092915050565b6102fe81610371565b82525050565b6000602082019050818103600083015261031e81846102bc565b905092915050565b600060208201905061033b60008301846102f5565b92915050565b600081519050919050565b600082825260208201905092915050565b6000819050919050565b6000819050919050565b600060ff82169050919050565b60005b8381101561039c578082015181840152602081019050610381565b838111156103ab576000848401525b50505050565b6000601f19601f8301169050919050565b6103cb8161035d565b81146103d657600080fd5b50565b6103e281610367565b81146103ed57600080fd5b5056fea365627a7a723158203a3717421845476450f92d6230673e22859aec236a0ce0e789b2c7d30b2f9f8f6c6578706572696d656e74616cf564736f6c63430005100040",
+  "sourceMap": "74:465:1:-;;;177:77;8:9:-1;5:2;;;30:1;27;20:12;5:2;177:77:1;;;;;;;;;;;;;;;;;;;;;;;;240:9;229:8;:20;;;;;;;;;;;;:::i;:::-;;177:77;74:465;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;22:704:-1:-;;156:3;149:4;141:6;137:17;133:27;123:2;;174:1;171;164:12;123:2;204:6;198:13;226:86;241:70;304:6;241:70;;;226:86;;;217:95;;329:5;354:6;347:5;340:21;384:4;376:6;372:17;362:27;;406:4;401:3;397:14;390:21;;459:6;492:1;477:243;502:6;499:1;496:13;477:243;;;578:3;572:10;564:6;560:23;602:54;652:3;640:10;602:54;;;597:3;590:67;680:4;675:3;671:14;664:21;;708:4;703:3;699:14;692:21;;534:186;524:1;521;517:9;512:14;;477:243;;;481:14;116:610;;;;;;;;735:436;;844:3;837:4;829:6;825:17;821:27;811:2;;862:1;859;852:12;811:2;892:6;886:13;914:61;929:45;967:6;929:45;;;914:61;;;905:70;;995:6;988:5;981:21;1031:4;1023:6;1019:17;1064:4;1057:5;1053:16;1099:3;1090:6;1085:3;1081:16;1078:25;1075:2;;;1116:1;1113;1106:12;1075:2;1126:39;1158:6;1153:3;1148;1126:39;;;804:367;;;;;;;;1179:404;;1325:2;1313:9;1304:7;1300:23;1296:32;1293:2;;;1341:1;1338;1331:12;1293:2;1397:1;1386:9;1382:17;1376:24;1420:18;1412:6;1409:30;1406:2;;;1452:1;1449;1442:12;1406:2;1472:95;1559:7;1550:6;1539:9;1535:22;1472:95;;;1462:105;;1355:218;1287:296;;;;;1590:256;;1652:2;1646:9;1636:19;;1690:4;1682:6;1678:17;1789:6;1777:10;1774:22;1753:18;1741:10;1738:34;1735:62;1732:2;;;1810:1;1807;1800:12;1732:2;1830:10;1826:2;1819:22;1630:216;;;;;1853:310;;2018:18;2010:6;2007:30;2004:2;;;2050:1;2047;2040:12;2004:2;2085:4;2077:6;2073:17;2065:25;;2148:4;2142;2138:15;2130:23;;1941:222;;;;2170:318;;2310:18;2302:6;2299:30;2296:2;;;2342:1;2339;2332:12;2296:2;2409:4;2405:9;2398:4;2390:6;2386:17;2382:33;2374:41;;2473:4;2467;2463:15;2455:23;;2233:255;;;;2496:268;2561:1;2568:101;2582:6;2579:1;2576:13;2568:101;;;2658:1;2653:3;2649:11;2643:18;2639:1;2634:3;2630:11;2623:39;2604:2;2601:1;2597:10;2592:15;;2568:101;;;2684:6;2681:1;2678:13;2675:2;;;2749:1;2740:6;2735:3;2731:16;2724:27;2675:2;2545:219;;;;;74:465:1;;;;;;;",
+  "deployedSourceMap": "74:465:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;74:465:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;350:104;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;94:49;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;458:79;;;;;;;;;;;;;;;;:::i;:::-;;148:24;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;350:104;408:5;428:15;:21;444:4;428:21;;;;;;;;;;;;;;;;;;;;;421:28;;350:104;;;:::o;94:49::-;;;;;;;;;;;;;;;;;;;;;;:::o;458:79::-;531:1;506:15;:21;522:4;506:21;;;;;;;;;;;;:26;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;458:79;:::o;148:24::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;5:130:-1:-;;85:6;72:20;63:29;;97:33;124:5;97:33;;;57:78;;;;;142:130;;222:6;209:20;200:29;;234:33;261:5;234:33;;;194:78;;;;;279:241;;383:2;371:9;362:7;358:23;354:32;351:2;;;399:1;396;389:12;351:2;434:1;451:53;496:7;487:6;476:9;472:22;451:53;;;441:63;;413:97;345:175;;;;;527:241;;631:2;619:9;610:7;606:23;602:32;599:2;;;647:1;644;637:12;599:2;682:1;699:53;744:7;735:6;724:9;720:22;699:53;;;689:63;;661:97;593:175;;;;;775:339;;883:35;912:5;883:35;;;930:71;994:6;989:3;930:71;;;923:78;;1006:52;1051:6;1046:3;1039:4;1032:5;1028:16;1006:52;;;1079:29;1101:6;1079:29;;;1074:3;1070:39;1063:46;;863:251;;;;;;1121:107;1200:22;1216:5;1200:22;;;1195:3;1188:35;1182:46;;;1235:293;;1369:2;1358:9;1354:18;1346:26;;1419:9;1413:4;1409:20;1405:1;1394:9;1390:17;1383:47;1444:74;1513:4;1504:6;1444:74;;;1436:82;;1340:188;;;;;1535:205;;1649:2;1638:9;1634:18;1626:26;;1663:67;1727:1;1716:9;1712:17;1703:6;1663:67;;;1620:120;;;;;1747:118;;1837:5;1831:12;1821:22;;1802:63;;;;1873:163;;1988:6;1983:3;1976:19;2025:4;2020:3;2016:14;2001:29;;1969:67;;;;;2044:72;;2106:5;2095:16;;2089:27;;;;2123:72;;2185:5;2174:16;;2168:27;;;;2202:81;;2273:4;2266:5;2262:16;2251:27;;2245:38;;;;2291:268;2356:1;2363:101;2377:6;2374:1;2371:13;2363:101;;;2453:1;2448:3;2444:11;2438:18;2434:1;2429:3;2425:11;2418:39;2399:2;2396:1;2392:10;2387:15;;2363:101;;;2479:6;2476:1;2473:13;2470:2;;;2544:1;2535:6;2530:3;2526:16;2519:27;2470:2;2340:219;;;;;2567:97;;2655:2;2651:7;2646:2;2639:5;2635:14;2631:28;2621:38;;2615:49;;;;2672:117;2741:24;2759:5;2741:24;;;2734:5;2731:35;2721:2;;2780:1;2777;2770:12;2721:2;2715:74;;2796:117;2865:24;2883:5;2865:24;;;2858:5;2855:35;2845:2;;2904:1;2901;2894:12;2845:2;2839:74;",
+  "source": "/* pragma solidity >=0.4.22 <0.8.0; */\npragma experimental ABIEncoderV2;\n\ncontract Rating {\n  mapping (bytes32 => uint8) public ratingsReceived;\n\n  string[] public bandList;\n\n  constructor(string[] memory bandNames) public {\n    bandList = bandNames;\n  }\n\n  /* function Rating(bytes32[] memory bandNames) public {\n    bandList = bandNames;\n  } */\n\n  function totalVotesFor(bytes32 band) view public returns (uint8) {\n    return ratingsReceived[band];\n  }\n\n  function voteForBand(bytes32 band) public {\n    ratingsReceived[band] += 1;\n  }\n}\n",
+  "sourcePath": "/Users/reshetn/Documents/GitHub/eth-band-rating/rating/contracts/Rating.sol",
+  "ast": {
+    "absolutePath": "/Users/reshetn/Documents/GitHub/eth-band-rating/rating/contracts/Rating.sol",
+    "exportedSymbols": {
+      "Rating": [
+        77
+      ]
+    },
+    "id": 78,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 34,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "39:33:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 77,
+        "linearizedBaseContracts": [
+          77
+        ],
+        "name": "Rating",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 38,
+            "name": "ratingsReceived",
+            "nodeType": "VariableDeclaration",
+            "scope": 77,
+            "src": "94:49:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint8_$",
+              "typeString": "mapping(bytes32 => uint8)"
+            },
+            "typeName": {
+              "id": 37,
+              "keyType": {
+                "id": 35,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "103:7:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "94:26:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint8_$",
+                "typeString": "mapping(bytes32 => uint8)"
+              },
+              "valueType": {
+                "id": 36,
+                "name": "uint8",
+                "nodeType": "ElementaryTypeName",
+                "src": "114:5:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 41,
+            "name": "bandList",
+            "nodeType": "VariableDeclaration",
+            "scope": 77,
+            "src": "148:24:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_string_storage_$dyn_storage",
+              "typeString": "string[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 39,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "148:6:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "id": 40,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "148:8:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                "typeString": "string[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 51,
+              "nodeType": "Block",
+              "src": "223:31:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 49,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 47,
+                      "name": "bandList",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 41,
+                      "src": "229:8:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_string_storage_$dyn_storage",
+                        "typeString": "string storage ref[] storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 48,
+                      "name": "bandNames",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 44,
+                      "src": "240:9:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_string_memory_$dyn_memory_ptr",
+                        "typeString": "string memory[] memory"
+                      }
+                    },
+                    "src": "229:20:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_string_storage_$dyn_storage",
+                      "typeString": "string storage ref[] storage ref"
+                    }
+                  },
+                  "id": 50,
+                  "nodeType": "ExpressionStatement",
+                  "src": "229:20:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 52,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 45,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 44,
+                  "name": "bandNames",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52,
+                  "src": "189:25:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_string_memory_$dyn_memory_ptr",
+                    "typeString": "string[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 42,
+                      "name": "string",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "189:6:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage_ptr",
+                        "typeString": "string"
+                      }
+                    },
+                    "id": 43,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "189:8:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                      "typeString": "string[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "188:27:1"
+            },
+            "returnParameters": {
+              "id": 46,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "223:0:1"
+            },
+            "scope": 77,
+            "src": "177:77:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 63,
+              "nodeType": "Block",
+              "src": "415:39:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 59,
+                      "name": "ratingsReceived",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 38,
+                      "src": "428:15:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint8_$",
+                        "typeString": "mapping(bytes32 => uint8)"
+                      }
+                    },
+                    "id": 61,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 60,
+                      "name": "band",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 54,
+                      "src": "444:4:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "428:21:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "functionReturnParameters": 58,
+                  "id": 62,
+                  "nodeType": "Return",
+                  "src": "421:28:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 64,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "totalVotesFor",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 55,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 54,
+                  "name": "band",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 64,
+                  "src": "373:12:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 53,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "373:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "372:14:1"
+            },
+            "returnParameters": {
+              "id": 58,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 57,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 64,
+                  "src": "408:5:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 56,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "408:5:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "407:7:1"
+            },
+            "scope": 77,
+            "src": "350:104:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 75,
+              "nodeType": "Block",
+              "src": "500:37:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 73,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 69,
+                        "name": "ratingsReceived",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 38,
+                        "src": "506:15:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint8_$",
+                          "typeString": "mapping(bytes32 => uint8)"
+                        }
+                      },
+                      "id": 71,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 70,
+                        "name": "band",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 66,
+                        "src": "522:4:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "506:21:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "+=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "31",
+                      "id": 72,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "531:1:1",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1_by_1",
+                        "typeString": "int_const 1"
+                      },
+                      "value": "1"
+                    },
+                    "src": "506:26:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "id": 74,
+                  "nodeType": "ExpressionStatement",
+                  "src": "506:26:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 76,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "voteForBand",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 67,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 66,
+                  "name": "band",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 76,
+                  "src": "479:12:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 65,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "479:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "478:14:1"
+            },
+            "returnParameters": {
+              "id": 68,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "500:0:1"
+            },
+            "scope": 77,
+            "src": "458:79:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 78,
+        "src": "74:465:1"
+      }
+    ],
+    "src": "39:501:1"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/reshetn/Documents/GitHub/eth-band-rating/rating/contracts/Rating.sol",
+    "exportedSymbols": {
+      "Rating": [
+        77
+      ]
+    },
+    "id": 78,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 34,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "39:33:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 77,
+        "linearizedBaseContracts": [
+          77
+        ],
+        "name": "Rating",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 38,
+            "name": "ratingsReceived",
+            "nodeType": "VariableDeclaration",
+            "scope": 77,
+            "src": "94:49:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint8_$",
+              "typeString": "mapping(bytes32 => uint8)"
+            },
+            "typeName": {
+              "id": 37,
+              "keyType": {
+                "id": 35,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "103:7:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "94:26:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint8_$",
+                "typeString": "mapping(bytes32 => uint8)"
+              },
+              "valueType": {
+                "id": 36,
+                "name": "uint8",
+                "nodeType": "ElementaryTypeName",
+                "src": "114:5:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 41,
+            "name": "bandList",
+            "nodeType": "VariableDeclaration",
+            "scope": 77,
+            "src": "148:24:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_string_storage_$dyn_storage",
+              "typeString": "string[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 39,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "148:6:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "id": 40,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "148:8:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                "typeString": "string[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 51,
+              "nodeType": "Block",
+              "src": "223:31:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 49,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 47,
+                      "name": "bandList",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 41,
+                      "src": "229:8:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_string_storage_$dyn_storage",
+                        "typeString": "string storage ref[] storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 48,
+                      "name": "bandNames",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 44,
+                      "src": "240:9:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_string_memory_$dyn_memory_ptr",
+                        "typeString": "string memory[] memory"
+                      }
+                    },
+                    "src": "229:20:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_string_storage_$dyn_storage",
+                      "typeString": "string storage ref[] storage ref"
+                    }
+                  },
+                  "id": 50,
+                  "nodeType": "ExpressionStatement",
+                  "src": "229:20:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 52,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 45,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 44,
+                  "name": "bandNames",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52,
+                  "src": "189:25:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_string_memory_$dyn_memory_ptr",
+                    "typeString": "string[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 42,
+                      "name": "string",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "189:6:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage_ptr",
+                        "typeString": "string"
+                      }
+                    },
+                    "id": 43,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "189:8:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                      "typeString": "string[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "188:27:1"
+            },
+            "returnParameters": {
+              "id": 46,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "223:0:1"
+            },
+            "scope": 77,
+            "src": "177:77:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 63,
+              "nodeType": "Block",
+              "src": "415:39:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 59,
+                      "name": "ratingsReceived",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 38,
+                      "src": "428:15:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint8_$",
+                        "typeString": "mapping(bytes32 => uint8)"
+                      }
+                    },
+                    "id": 61,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 60,
+                      "name": "band",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 54,
+                      "src": "444:4:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "428:21:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "functionReturnParameters": 58,
+                  "id": 62,
+                  "nodeType": "Return",
+                  "src": "421:28:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 64,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "totalVotesFor",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 55,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 54,
+                  "name": "band",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 64,
+                  "src": "373:12:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 53,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "373:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "372:14:1"
+            },
+            "returnParameters": {
+              "id": 58,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 57,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 64,
+                  "src": "408:5:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 56,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "408:5:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "407:7:1"
+            },
+            "scope": 77,
+            "src": "350:104:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 75,
+              "nodeType": "Block",
+              "src": "500:37:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 73,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 69,
+                        "name": "ratingsReceived",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 38,
+                        "src": "506:15:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint8_$",
+                          "typeString": "mapping(bytes32 => uint8)"
+                        }
+                      },
+                      "id": 71,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 70,
+                        "name": "band",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 66,
+                        "src": "522:4:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "506:21:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "+=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "31",
+                      "id": 72,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "531:1:1",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1_by_1",
+                        "typeString": "int_const 1"
+                      },
+                      "value": "1"
+                    },
+                    "src": "506:26:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "id": 74,
+                  "nodeType": "ExpressionStatement",
+                  "src": "506:26:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 76,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "voteForBand",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 67,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 66,
+                  "name": "band",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 76,
+                  "src": "479:12:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 65,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "479:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "478:14:1"
+            },
+            "returnParameters": {
+              "id": 68,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "500:0:1"
+            },
+            "scope": 77,
+            "src": "458:79:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 78,
+        "src": "74:465:1"
+      }
+    ],
+    "src": "39:501:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "1604181719265": {
+      "events": {},
+      "links": {},
+      "address": "0x34EA6bc077BE7b8A05E0B718411603f2783d348E",
+      "transactionHash": "0x728ca65fd44d97c0b2205ed920c135a70786744a5c6f02d6d4ee60da49e2f9a1"
+    }
+  },
+  "schemaVersion": "3.3.1",
+  "updatedAt": "2020-10-31T22:44:40.004Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
