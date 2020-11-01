@@ -1,0 +1,9 @@
+table, th, td {
+  border: 1px solid black;
+  margin: 0 auto;
+  padding: 2px;
+}
+
+.clickable {
+  cursor: pointer;
+}
