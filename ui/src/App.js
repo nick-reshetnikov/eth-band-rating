@@ -7,14 +7,26 @@ class App extends Component {
 
   constructor(props){
     super(props)
-    this.state = {
-      bands : [
-        {name: "Children of Bodom", rating:0},
-        {name: "Pentagram", rating: 0},
-        {name: "Megadeth", rating: 0}
-      ]
+
+    let bandNames = [];
+    let i = 0;
+
+    this.state = { bands: [] }
+
+    while(true){
+      try {
+        let name = ratingContract.bandList(i);
+        this.state.bands.push(
+          { name: name, rating: ratingContract.totalVotesFor(name).toNumber()}
+        );
+      }
+      catch (e) {
+        break;
+      }
+      i++;
     }
-    this.handleVoting = this.handleVoting.bind(this)
+
+    this.handleVoting = this.handleVoting.bind(this);
   }
 
   handleVoting(band){
@@ -33,7 +45,6 @@ class App extends Component {
 
     return (
       <div className="App">
-
         <h1 className="intro">Band Rating App | Etherium + React</h1>
         <div className="band-table">
           <ShowBands bands={this.state.bands} vote={this.handleVoting} />
