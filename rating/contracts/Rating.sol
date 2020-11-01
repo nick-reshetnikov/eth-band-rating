@@ -2,7 +2,7 @@
 pragma experimental ABIEncoderV2;
 
 contract Rating {
-  mapping (bytes32 => uint8) public ratingsReceived;
+  mapping (string => uint8) public ratingsReceived;
 
   string[] public bandList;
 
@@ -14,11 +14,11 @@ contract Rating {
     bandList = bandNames;
   } */
 
-  function totalVotesFor(bytes32 band) view public returns (uint8) {
+  function totalVotesFor(string memory band) view public returns (uint8) {
     return ratingsReceived[band];
   }
 
-  function voteForBand(bytes32 band) public {
+  function voteForBand(string memory band) public {
     ratingsReceived[band] += 1;
   }
 }
