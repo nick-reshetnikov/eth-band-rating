@@ -26,8 +26,24 @@ class App extends Component {
       i++;
     }
 
+    this.textInput = React.createRef();
+    this.handleAddBandClick = this.handleAddBandClick.bind(this);
     this.handleVoting = this.handleVoting.bind(this);
   }
+
+  handleAddBandClick(){
+    let addedBand = this.textInput.current.value;
+
+    if(ratingContract.contains(addedBand)){
+      alert(`${addedBand} is already in the list!`);
+    }else{
+      ratingContract.add(addedBand);
+
+      this.state.bands.push({name: addedBand, rating: 0});
+      this.setState({bands: this.state.bands});
+    }
+  }
+
 
   handleVoting(band){
     ratingContract.voteForBand(band);
@@ -43,11 +59,22 @@ class App extends Component {
 
   render() {
 
+    let addButton =
+      <div className="add-button">
+        <input type="text" ref={this.textInput} />
+        <input
+          type="button"
+          value="Add Band"
+          onClick={this.handleAddBandClick}
+        />
+      </div>
+
     return (
       <div className="App">
         <h1 className="intro">Band Rating App | Etherium + React</h1>
         <div className="band-table">
           <ShowBands bands={this.state.bands} vote={this.handleVoting} />
+          {addButton}
         </div>
       </div>
     );
