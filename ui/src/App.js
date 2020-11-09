@@ -27,11 +27,11 @@ class App extends Component {
     }
 
     this.textInput = React.createRef();
-    this.handleAddBandClick = this.handleAddBandClick.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.handleVoting = this.handleVoting.bind(this);
   }
 
-  handleAddBandClick(){
+  handleSubmit(){
     let addedBand = this.textInput.current.value;
 
     if(ratingContract.contains(addedBand)){
@@ -59,22 +59,20 @@ class App extends Component {
 
   render() {
 
-    let addButton =
-      <div className="add-button">
-        <input type="text" ref={this.textInput} />
-        <input
-          type="button"
-          value="Add Band"
-          onClick={this.handleAddBandClick}
-        />
-      </div>
+    let addForm =
+      <form onSubmit={this.handleSubmit}>
+        <label>
+          <input type="text" ref={this.textInput} />
+        </label>
+        <input type="submit" value="Add Band" />
+      </form>
 
     return (
       <div className="App">
         <h1 className="intro">Band Rating App | Etherium + React</h1>
         <div className="band-table">
           <ShowBands bands={this.state.bands} vote={this.handleVoting} />
-          {addButton}
+          {addForm}
         </div>
       </div>
     );
