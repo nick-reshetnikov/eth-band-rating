@@ -64,7 +64,7 @@ class App extends Component {
         <label>
           <input type="text" ref={this.textInput} />
         </label>
-        <input type="submit" value="Add Band" />
+        <input className="clickable" type="submit" value="Add Band" />
       </form>
 
     return (
