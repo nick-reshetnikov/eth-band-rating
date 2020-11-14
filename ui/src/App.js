@@ -14,10 +14,12 @@ class App extends Component {
     this.state = { bands: [] }
 
     while(true){
+
       try {
-        let name = ratingContract.bandList(i);
+        let band = ratingContract.bandList(i);
+
         this.state.bands.push(
-          { name: name, rating: ratingContract.totalVotesFor(name).toNumber()}
+          { name: band, rating: this.ratingForBand(band) }
         );
       }
       catch (e) {
@@ -29,6 +31,11 @@ class App extends Component {
     this.textInput = React.createRef();
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleVoting = this.handleVoting.bind(this);
+  }
+
+  ratingForBand(band){
+    let [ratingSum, numVotes] = ratingContract.ratingFor(band)
+    return (numVotes == 0) ? 0 : ratingSum.toNumber() / numVotes.toNumber();
   }
 
   handleSubmit(){
@@ -45,13 +52,12 @@ class App extends Component {
   }
 
 
-  handleVoting(band){
-    ratingContract.voteForBand(band);
-    let votes = ratingContract.totalVotesFor(band).toNumber();
+  handleVoting(band, rating){
+    ratingContract.voteForBand(band, rating);
     this.setState(
       {
         bands: this.state.bands.map(
-          (el) => (el.name === band) ? Object.assign({},el,{rating:votes}) : el
+          (el) => (el.name === band) ? Object.assign({},el,{rating:this.ratingForBand(band)}) : el
         )
       }
     );
