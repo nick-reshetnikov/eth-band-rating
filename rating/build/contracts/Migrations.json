@@ -123,7 +123,7 @@
                 "name": "msg",
                 "nodeType": "Identifier",
                 "overloadedDeclarations": [],
-                "referencedDeclaration": 92,
+                "referencedDeclaration": 195,
                 "src": "113:3:0",
                 "typeDescriptions": {
                   "typeIdentifier": "t_magic_message",
@@ -201,7 +201,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 92,
+                            "referencedDeclaration": 195,
                             "src": "211:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -277,10 +277,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        95,
-                        96
+                        198,
+                        199
                       ],
-                      "referencedDeclaration": 96,
+                      "referencedDeclaration": 199,
                       "src": "196:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -527,7 +527,7 @@
                 "name": "msg",
                 "nodeType": "Identifier",
                 "overloadedDeclarations": [],
-                "referencedDeclaration": 92,
+                "referencedDeclaration": 195,
                 "src": "113:3:0",
                 "typeDescriptions": {
                   "typeIdentifier": "t_magic_message",
@@ -605,7 +605,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 92,
+                            "referencedDeclaration": 195,
                             "src": "211:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -681,10 +681,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        95,
-                        96
+                        198,
+                        199
                       ],
-                      "referencedDeclaration": 96,
+                      "referencedDeclaration": 199,
                       "src": "196:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -966,12 +966,30 @@
     "1604883397529": {
       "events": {},
       "links": {},
-      "address": "0x770d4395cEd3Cc9eD7f465c8b614af0409BC434C",
-      "transactionHash": "0xde3178067c10949427fc633828e3ed52e56d1c57242cd34a7684df29f40f8f86"
+      "address": "0x28bD8E43412F3aE350AE66C6aE78FE3071a136c7",
+      "transactionHash": "0xf55d16e0084bab3e6a325508082003b4ee6607a7f75ece4b378aaf3299c36bfe"
+    },
+    "1605348715740": {
+      "events": {},
+      "links": {},
+      "address": "0x3eb38292c5Ef1D6A36B0434f1F24fd6Ec0d66166",
+      "transactionHash": "0x89aac4b481e377a7c1fa7880fe280af160e1d324d59b9c8344510a579e0f37fe"
+    },
+    "1605348930091": {
+      "events": {},
+      "links": {},
+      "address": "0x04306B3aC214f1bD5bE21D42A84c8421bDc307E6",
+      "transactionHash": "0xf45c0137ed9db56cf43c8c10cac87eb9c115c8b80731b538e052725947976b18"
+    },
+    "1605349910271": {
+      "events": {},
+      "links": {},
+      "address": "0x2295B0201ae92f7eA078305b2DE3Bb05e3c48EF6",
+      "transactionHash": "0xceb4ced988725cbdf900793d45f219f8c399e20c64cc64f05d5f5c37d9945f6b"
     }
   },
   "schemaVersion": "3.3.1",
-  "updatedAt": "2020-11-09T00:57:20.137Z",
+  "updatedAt": "2020-11-14T11:50:25.128Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}
