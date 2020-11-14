@@ -8,7 +8,6 @@ class App extends Component {
   constructor(props){
     super(props)
 
-    let bandNames = [];
     let i = 0;
 
     this.state = { bands: [] }
@@ -35,7 +34,7 @@ class App extends Component {
 
   ratingForBand(band){
     let [ratingSum, numVotes] = ratingContract.ratingFor(band)
-    return (numVotes == 0) ? 0 : ratingSum.toNumber() / numVotes.toNumber();
+    return (numVotes === 0) ? 0 : ratingSum.toNumber() / numVotes.toNumber();
   }
 
   handleSubmit(){

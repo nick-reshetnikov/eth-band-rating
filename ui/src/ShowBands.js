@@ -17,8 +17,12 @@ export class ShowBands extends Component {
   }
 
   handleChange(_band, event) {
-    this.state.newVotes[_band] = event.target.value
-    this.setState({newVotes: this.state.newVotes});
+    let _newVotes = this.state.newVotes;
+    _newVotes[_band] = event.target.value
+
+    this.setState({
+      newVotes: _newVotes
+    });
   }
 
   handleSubmit(band) {
