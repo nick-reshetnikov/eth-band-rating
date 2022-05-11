@@ -53,4 +53,8 @@ contract Rating {
     uint8 _index = _rating - 1;
     numVotes[_band][_index] += 1;
   }
+
+  function bandCount() view public returns (uint256 _count){
+    return bandList.length;
+  }
 }
