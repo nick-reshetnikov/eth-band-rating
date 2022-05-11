@@ -4,8 +4,13 @@ import './ShowBands.css';
 const BandRow = ({contract, name}) => {
   const [ratingInContract, setRatingInContract] = useState()
   const [enteredRating, setEnteredRating] = useState()
-  const handleVote = async () => {
-    contract.methods.voteForBand(name, parseInt(enteredRating)).call({}, (e,r)=>{console.log(e,r)})
+  const [transactionToggle, setTransactionToggle] = useState(false)
+
+  const handleVote = async (e) => {
+    e.preventDefault()
+
+    await contract.methods.voteForBand(name, parseInt(enteredRating)).send()
+    setTransactionToggle(prev => !prev)
   }
 
   useEffect(() => {
@@ -17,14 +22,14 @@ const BandRow = ({contract, name}) => {
     }
 
     fetchRating()
-  }, [contract, name])
+  }, [contract, name, transactionToggle])
 
   return(
     <tr>
       <td>{name}</td>
-      <td>{ratingInContract}</td>
+      <td>{ratingInContract?.toFixed(1)}</td>
       <td>
-        <form onSubmit={(e) => {e.preventDefault(); handleVote()}}>
+        <form onSubmit={(e) => handleVote(e)}>
           <input type="text" className="integer-input" onChange={(e) => setEnteredRating(e.target.value)} />
           <input type="submit" value="rate" className="clickable" />
         </form>
