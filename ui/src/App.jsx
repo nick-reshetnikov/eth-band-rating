@@ -39,7 +39,14 @@ const App = () => {
   }, [])
 
   useEffect(() => {
-    if(contract) contract.events.VoteApplied({}, (error, event) => { console.log(event.returnValues) })
+    if (contract) {
+      contract.getPastEvents('VoteApplied',
+        { fromBlock: 0, toBlock: 'latest' },
+        (error, events) => { console.log(events) }
+      )
+
+      contract.events.VoteApplied({}, (error, event) => { console.log(event.returnValues) })
+    }
   }, [contract])
 
   useEffect(() => {
