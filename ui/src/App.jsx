@@ -39,6 +39,10 @@ const App = () => {
   }, [])
 
   useEffect(() => {
+    if(contract) contract.events.VoteApplied({}, (error, event) => { console.log(event.returnValues) })
+  }, [contract])
+
+  useEffect(() => {
     const updateBandList = async () => {
       if (contract) setBandList(await buildBandList(contract))
     }
