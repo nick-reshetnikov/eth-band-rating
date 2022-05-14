@@ -8,8 +8,9 @@ const BandRow = ({contract, name}) => {
 
   const handleVote = async (e) => {
     e.preventDefault()
-
+    contract.events.VoteApplied({}, (error, event) => { console.log(event.returnValues) })
     await contract.methods.voteForBand(name, parseInt(enteredRating)).send()
+
     setTransactionToggle(prev => !prev)
   }
 
