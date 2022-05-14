@@ -23,9 +23,7 @@ contract Rating {
     }
   }
 
-  // function totalVotesFor(string memory _band) view public returns (uint8) {
-  //   return ratingsReceived[_band];
-  // }
+  event VoteApplied(address indexed _from, string _band, uint8 _rating, uint8 _voteNum);
 
   function ratingFor(string memory _band) view public returns (uint8, uint8) {
     uint8 _numVotes = 0;
@@ -36,7 +34,6 @@ contract Rating {
         _numVotes += numVotes[_band][i];
     }
     return (_ratingSum, _numVotes);
-    // return 0;
   }
 
   function add(string memory _band) public {
@@ -49,9 +46,9 @@ contract Rating {
   }
 
   function voteForBand(string memory _band, uint8 _rating) public {
-    // ratingsReceived[_band] += 1;
     uint8 _index = _rating - 1;
     numVotes[_band][_index] += 1;
+    emit VoteApplied(msg.sender, _band, _rating, numVotes[_band][_index]);
   }
 
   function bandCount() view public returns (uint256 _count){
